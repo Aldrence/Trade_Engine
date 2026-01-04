@@ -1,0 +1,13 @@
+I want you to help me build a trading bot that works without using an official broker API by controlling the broker’s app or web interface the same way a human trader would. The bot should rely on external control / UI automation, meaning it moves the mouse, clicks buttons, types values, and confirms trades directly on the platform.
+
+The bot should support multiple automation environments, starting with desktop automation using Python (PyAutoGUI) and web automation using Selenium or Playwright, with the ability to later extend to mobile automation using Appium or Android Debug Bridge (ADB). The design should be modular so that the strategy logic is completely separate from the UI execution layer.
+
+The bot must implement custom trading strategies that I define, such as EMA crossovers, RSI thresholds, or breakout strategies. It should read market price data from public or accessible data sources (for example TradingView, Yahoo Finance, Binance, or another reliable price feed), evaluate the strategy conditions in real time, and generate trade signals when conditions are met.
+
+Once a valid trade signal occurs, the bot should automatically locate the correct elements on the broker’s interface (such as Buy/Sell buttons, trade amount fields, expiry selectors for binary options, and confirmation buttons). The automation must rely primarily on image recognition and element detection rather than fixed screen coordinates to improve reliability. The bot should then enter the correct trade amount, select the correct direction, confirm the trade, and log the result.
+
+The system should include robust error handling and safety mechanisms, such as retries if UI elements are not found, graceful pauses if the platform is unresponsive, and immediate alerts if execution fails. A logging system should record all trades, timestamps, strategy used, trade direction, amount, and execution status.
+
+Risk and money management must be configurable, allowing me to define fixed trade sizes per strategy, optional Martingale or progressive staking logic, maximum daily loss, stop-loss, and take-profit limits. These rules should be enforced strictly to prevent overtrading or runaway losses.
+
+The bot should be able to run continuously in a loop with configurable delays, handle UI or layout changes by reloading reference images, and optionally send trade notifications via Telegram, email, or desktop alerts. The final output should include a fully functional Python automation script, clear explanations of each component (strategy logic, UI automation, risk management, logging), and step-by-step instructions on capturing UI screenshots, training the bot to recognize interface elements, and safely testing the bot on a demo account before live deployment.

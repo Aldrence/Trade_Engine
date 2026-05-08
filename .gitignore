@@ -1,6 +1,14 @@
-node_modules
-dist
+```gitignore
+node_modules/
+dist/
+build/
+.local/
+.vscode/
+.env
+*.log
 .DS_Store
-server/public
+server/public/
 vite.config.ts.*
 *.tar.gz
+attached_assets/
+```
